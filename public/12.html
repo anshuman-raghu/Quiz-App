@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <title>Quiz Master</title>
+        <link rel="stylesheet" href="12.css" />
+        <script src="12.js" defer></script>
+    </head>
+    <body>
+        <div class="container">
+            <form id="quizOptionsContainer">
+                <h2 id="quizSetupHeading">Set Up Your Quiz</h2>
+                <div class="form-group">
+                    <label for="quizTopic"> Topic:</label>
+                    <input
+                        type="text"
+                        id="quizTopic"
+                        placeholder="e.g. HTML, SCIENCE..."
+                        required
+                    />
+                </div>
+
+                <div class="form-group">
+                    <label for="noOfQuestion">Number of Questions:</label>
+                    <input
+                        type="number"
+                        id="noOfQuestion"
+                        placeholder="1-10"
+                        required
+                        min="1"
+                        max="10"
+                    />
+                </div>
+                <button id="startQuizBtn" type="submit">Start Quiz</button>
+                <div id="loadingIndicator" class="hidden">
+                    <div class="spinner"></div>
+                    <p>Generating Quiz, please wait...</p>
+                </div>
+            </form>
+
+            <div id="QuestionContainer" class="hidden">
+                <div id="quizProgress">Question 1 of 10</div>
+                <h2 id="questionText"></h2>
+                <ul id="ChoiceList"></ul>
+                <button id="nextQuestion">Next Question</button>
+            </div>
+
+            <div id="resultContainer" class="hidden">
+                <h2 id="resultHeading">Quiz Completed!</h2>
+
+                <h3>Your Score</h3>
+                <p id="score"></p>
+                <button id="restart">Start Another Quiz</button>
+            </div>
+        </div>
+        <div id="instructionContainer">
+            Select an answer and click "Next Question". Once you move to the
+            next question, you cannot change your previous answer.
+        </div>
+    </body>
+</html>

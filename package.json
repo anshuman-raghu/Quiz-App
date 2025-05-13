@@ -1,0 +1,22 @@
+{
+    "name": "quiz-app",
+    "version": "1.0.0",
+    "main": "12.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "dev": "nodemon server.js"
+    },
+    "license": "ISC",
+    "type": "module",
+    "dependencies": {
+        "@google/genai": "^0.13.0",
+        "@google/generative-ai": "^0.24.1",
+        "cors": "^2.8.5",
+        "dotenv": "^16.5.0",
+        "express": "^5.1.0",
+        "node-fetch": "^3.3.2"
+    },
+    "devDependencies": {
+        "nodemon": "^3.1.10"
+    }
+}
